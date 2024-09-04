@@ -12,7 +12,7 @@ const GoogleDriveService = {
       body: JSON.stringify({
         mimeType: "application/vnd.google-apps.folder",
         name: folderName,
-        parents: ["1-4H1RA8oTDujl4ayADx9ab6eNrEzxfgy"],
+        parents: [process.env.NEXT_PUBLIC_ROOT_FOLDER_ID],
       }),
     };
     try {

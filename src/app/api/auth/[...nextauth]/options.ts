@@ -6,8 +6,8 @@ const authOptions: NextAuthOptions = {
   providers: [
     // !!! Should be stored in .env file.
     GoogleProvider({
-      clientId: `1054477415822-330pi4lm6hne0p0shar5n9k3im1ig61q.apps.googleusercontent.com`,
-      clientSecret: `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`,
+      clientId: process.env.NEXT_PUBLIC_CLIENT_ID as string,
+      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET as string,
       authorization: {
         params: {
           scope: "openid email profile https://www.googleapis.com/auth/drive",
@@ -38,7 +38,7 @@ const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  secret: `UItTuD1HcGXIj8ZfHUswhYdNd40Lc325R8VlxQPUoR0=`,
+  secret: process.env.NEXT_PUBLIC_CLIENT_SECRET as string,
 };
 
 export default authOptions;

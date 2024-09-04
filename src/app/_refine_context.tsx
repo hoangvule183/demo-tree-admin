@@ -122,10 +122,6 @@ const App = (props: React.PropsWithChildren<AppProps>) => {
               authProvider={authProvider}
               resources={[
                 {
-                  name: "upload files",
-                  list: "/upload-files",
-                },
-                {
                   name: "groups",
                   list: "/groups",
                   create: "/groups/create",
